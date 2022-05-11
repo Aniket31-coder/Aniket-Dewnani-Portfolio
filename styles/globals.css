@@ -1,3 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap'); */
+
 html,
 body {
   padding: 0;
@@ -13,4 +18,55 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Nunito', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+}
+
+@font-face {
+  font-family: 'Lobster', cursive;
+  src: url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+}
+
+.titleName {
+  font-family: 'Nunito', sans-serif;
+  text-transform: uppercase;
+}
+
+.oleofont {
+  font-family: 'Lobster', cursive;
+}
+
+@keyframes growProgressBar {
+  0%, 33% { --pgPercentage: 0; }
+  100% { --pgPercentage: 80; }
+}
+/* 
+@property --pgPercentage {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 0;
+} */
+
+div[role="progressbar"] {
+  --size: 12rem;
+  --fg: rgb(77, 72, 72);
+  --bg: rgb(212, 213, 215);
+  --pgPercentage: 80;
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+  background: 
+    radial-gradient(closest-side, white 80%, transparent 0 99.9%, white 0),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0)
+    ;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
 }
