@@ -38,7 +38,7 @@ function NavbarComponent() {
         {/*Note that in this div we will use a ternary operator to decide whether or not to display the content of the div  */}
         <div
           className={`${
-            active ? 'bg-gray-500 opacity-80 rounded-2xl lg:opacity-100 lg:bg-transparent lg:rounded-none' : 'hidden'
+            active ? 'bg-gray-500 opacity-90 rounded-2xl z-50 lg:opacity-100 lg:bg-transparent lg:rounded-none' : 'hidden'
           }   w-full lg:inline-flex lg:flex-grow lg:w-auto`}
         >
           <div className='lg:inline-flex lg:flex-row lg:ml-auto lg:w-auto text-center lg:space-x-14 w-full lg:items-center items-start  flex flex-col lg:h-auto'>

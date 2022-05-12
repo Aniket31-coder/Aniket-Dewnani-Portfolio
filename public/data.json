@@ -64,5 +64,35 @@
             "width": "110px",
             "height": "70px"
         }
+    ],
+    "experience" : [
+        {
+            "id": 1,
+            "company": "Kalpas Innovations Pvt. Ltd.",
+            "title": "ReactJS Developer Intern",
+            "date": "December 2021 to March 2022",
+            "desc": "Designed websites according to the UI provided. Integrated API to the Front-End."
+        },
+        {
+            "id": 2,
+            "company": "App Avengers",
+            "title": "Front-End Web Developer",
+            "date": "September 2021 to November 2021",
+            "desc": "Made the front-end using the given figma design. Used the JSON file for showing the dynamic data."
+        },
+        {
+            "id": 3,
+            "company": "Youth India E-School",
+            "title": "Front-End Web Developer",
+            "date": "June 2021 to September 2021",
+            "desc": "Built the Front End using the design given by the Graphic Design team in ReactJS and TailwindCSS. Brushed up my core concepts regarding JS, ReactJS. Learnt new technologies such as using SEO for a website and NextJS."
+        },
+        {
+            "id": 4,
+            "company": "VESIT Renaissance Club",
+            "title": "Front-End Web Developer",
+            "date": "June 2021 to July 2021",
+            "desc": "Led the Front End group, for the making of an Educational Site. Drew the basic layout on Figma. I was in the Backend team, where I fetched data from Firebase."
+        }
     ]
 }

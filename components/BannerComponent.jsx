@@ -23,19 +23,19 @@ function BannerComponent() {
             <p className='text-gray-500 text-lg tracking-wide font-bold pt-2'>Front-End Developer</p>
             <div className='flex w-72 mt-4 md:mb-6 lg:mb-0 md:mt-12'>
               <div className='flex-1'>
-                <button className='bg-gray-500 hover:bg-gray-700 text-white font-bold pt-1 px-2 rounded' onClick={() => {window.location=("mailto:aniketdewnani31@gmail.com")}}>
+                <a target="_blank" href="mailto:aniketdewnani31@gmail.com" rel="noopener noreferrer" className='bg-gray-500 hover:bg-gray-200 text-white font-bold pt-3 px-2 rounded'>
                   <Image src="/assets/email.svg" width="25px" height="25px" alt="Social Media Icon" />
-                </button>
+                </a>
               </div>
               <div className='flex-1'>
-                <button className='bg-gray-500 hover:bg-gray-700 text-white font-bold pt-1 px-2 rounded' onClick={() => {window.open("https://www.github.com/Aniket31-coder")}}>
+                <a target="_blank" href="https://www.github.com/Aniket31-coder" rel="noopener noreferrer" className='bg-gray-500 hover:bg-gray-200 text-white font-bold pt-3 px-2 rounded'>
                   <Image src="/assets/github.svg" width="25px" height="25px" alt="Social Media Icon" />
-                </button>
+                </a>
               </div>
               <div className='flex-1'>
-                <button className='bg-gray-500 hover:bg-gray-700 text-white font-bold pt-1 px-2 rounded' onClick={() => {window.open("https://www.linkedin.com/in/aniket-dewnani-076392193/")}}>
+                <a target="_blank" href="https://www.linkedin.com/in/aniket-dewnani-076392193/" rel="noopener noreferrer" className='bg-gray-500 hover:bg-gray-200 text-white font-bold pt-3 px-2 rounded'>
                   <Image src="/assets/linkedin.svg" width="25px" height="25px" alt="Social Media Icon" />
-                </button>
+                </a>
               </div>
             </div>
           </div>
