@@ -1,0 +1,68 @@
+{
+    "skills" : [
+        {
+            "id": 1,
+            "image": "/assets/html.png",
+            "value": 85,
+            "alt": "HTML Icon",
+            "width": "110px",
+            "height": "120px"
+        },
+        {
+            "id": 2,
+            "image": "/assets/css.png",
+            "value": 95,
+            "alt": "CSS Icon",
+            "width": "90px",
+            "height": "120px"
+        },
+        {
+            "id": 3,
+            "image": "/assets/reactjs.png",
+            "value": 90, 
+            "alt": "ReactJS Icon",
+            "width": "110px",
+            "height": "100px"
+        },
+        {
+            "id": 4,
+            "image": "/assets/nodejs.png",
+            "value": 55,
+            "alt": "NodeJS Icon",
+            "width": "110px",
+            "height": "80px"
+        },
+        {
+            "id": 5,
+            "image": "/assets/java.png",
+            "value": 65,
+            "alt": "Java Icon",
+            "width": "65px",
+            "height": "110px"
+        },
+        {
+            "id": 6,
+            "image": "/assets/python.webp",
+            "value": 60,
+            "alt": "Python Icon",
+            "width": "110px",
+            "height": "110px"
+        },
+        {
+            "id": 7,
+            "image": "/assets/figma.svg",
+            "value": 80,
+            "alt": "Figma Icon",
+            "width": "110px",
+            "height": "80px"
+        },
+        {
+            "id": 8,
+            "image": "/assets/nextjs.png",
+            "value": 70,
+            "alt": "NextJS Icon",
+            "width": "110px",
+            "height": "70px"
+        }
+    ]
+}
