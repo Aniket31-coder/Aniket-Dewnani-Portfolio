@@ -8,6 +8,8 @@ import BannerComponent from '../components/BannerComponent'
 import AboutComponent from '../components/AboutComponent'
 import ExperienceComponent from '../components/ExperienceComponent'
 import ContactComponent from '../components/ContactComponent'
+import NavbarComponent from '../components/NavbarComponent'
+import BannerComponentMobile from '../components/BannerComponentMobile'
 
 const SkillsComponent = dynamic(
   () => import('../components/SkillsComponent'),
@@ -22,7 +24,16 @@ export default function Home() {
         <meta name="description" content="Aniket Dewnani's Creative Portfolio" />
         <link rel="icon" href="/assets/logo.png" />
       </Head>
-      <BannerComponent />
+      <div className={`scroll-smooth ${styles.maincontainer}`}>
+        <NavbarComponent />
+        <div className='hidden md:block'>
+          <BannerComponent />
+        </div>
+        <div className='block md:hidden'>
+          <BannerComponentMobile /> 
+        </div>
+        
+      </div>
       <div className={styles.aboutsection}>
         {/* About Me Section */}
         <AboutComponent />

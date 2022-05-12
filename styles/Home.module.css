@@ -1,11 +1,24 @@
 .maincontainer {
-  padding: 0 4rem;
   background: linear-gradient(100deg, #d1d0d0 45%, #000000 45%);
   /* min-height: 100vh; */
-  max-height: 100vh;
+  /* max-height: 100vh; */
   overflow: hidden;
 }
 
 .aboutsection {
   background: radial-gradient(50% 50% at 50% 50%, rgba(26, 21, 21, 0) 0%, rgba(1, 1, 1, 0.16) 100%), #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  .maincontainer {
+    background: linear-gradient(100deg, #d1d0d0 53%, #000000 53%);
+  }
+}
+
+@media (max-width: 700px) {
+  .maincontainer {
+    background:#000000;
+    min-height: 100vh;
+    /* max-height: 100vh; */
+  }
 }

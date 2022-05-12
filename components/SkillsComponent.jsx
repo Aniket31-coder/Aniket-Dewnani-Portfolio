@@ -17,7 +17,7 @@ function SkillsComponent() {
       }
     
     return (
-        <div id="Skills" className="pb-24 pt-12">
+        <div id="skills" className="pb-24 pt-12">
             <div className="border-x-2 border-gray-600 w-fit px-4 mx-auto">
             <h4 className='font-bold titleName text-2xl text-center tracking-wider'>Skills</h4>
             </div>
