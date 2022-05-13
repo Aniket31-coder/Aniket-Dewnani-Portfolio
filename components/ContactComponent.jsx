@@ -42,7 +42,7 @@ function ContactComponent() {
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents Refreshing the Form
         userName = name
-        console.log(name + "  " + email +" " + body);
+        // console.log(name + "  " + email +" " + body);
         submit = true;
         var templateParams = {
             name: name,
@@ -51,17 +51,17 @@ function ContactComponent() {
             'g-recaptcha-response': captchaVal,
         };
         if(captchaVal != null) {
-            console.log('Sending Mail : ',process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, templateParams)
+            // console.log('Sending Mail : ',process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, templateParams)
            
             emailjs.send(process.env.EMAILJS_SERVICE_ID, process.env.EMAILJS_TEMPLATE_ID, templateParams, process.env.EMAILJS_PUBLIC_KEY)
                 .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
+                    // console.log('SUCCESS!', response.status, response.text);
                     setShowModal(!showModal);
                     setName('');
                     setBody('');
                     setEmail('');
                 }, function(error) {
-                console.log('FAILED...', error);
+                // console.log('FAILED...', error);
                 });
         }
         else {
@@ -77,7 +77,7 @@ function ContactComponent() {
                     <h4 className='font-bold titleName text-2xl text-center tracking-wider'>Contact Me 📧</h4>
                 </div>
                 <div className="w-10/12 mx-auto md:w-8/12 lg:w-6/12 bg-zinc-400 mt-12 p-3 md:p-4 lg:p-12 rounded-xl">
-                <form className='grid grid-cols-1 gap-6' onSubmit={handleSubmit}>
+                <form className='grid grid-cols-1 gap-6 max-w-full' onSubmit={handleSubmit}>
                     <label className="block">
                         <span className="text-white titleName font-semibold tracking-wider">Full name</span>
                         <input type="text" required className="mt-1 w-full p-2 rounded-lg outline-none" placeholder="Your Name" value={name} onChange={(e) => {setName(e.target.value)}} />
@@ -92,17 +92,32 @@ function ContactComponent() {
                         <span className="text-white titleName font-semibold tracking-wider">Message</span>
                         <textarea required className="mt-1 block w-full p-4 rounded-lg outline-none" rows={3} placeholder="Your Message" value={body} onChange={(e) => {setBody(e.target.value)}}></textarea>
                     </label>
-                    <ReCAPTCHA
-                        sitekey={process.env.RECAPTCHA_SITE_KEY}
-                        onChange={(value)=> {
-                            setCaptchaVal(value)
-                            console.log("Captcha value:", value);
-                            // captcha = value;
-                        }}
-                        size="normal"
-                        required
-                        className = "mt-1"
-                    />
+                    <div className='hidden md:block'>
+                        <ReCAPTCHA
+                            sitekey={process.env.RECAPTCHA_SITE_KEY}
+                            onChange={(value)=> {
+                                setCaptchaVal(value)
+                                console.log("Captcha value:", value);
+                                // captcha = value;
+                            }}
+                            size="normal"
+                            required
+                            className = "mt-1 mx-0"
+                        />
+                    </div>
+                    <div className='flex md:hidden'>
+                        <ReCAPTCHA
+                            sitekey={process.env.RECAPTCHA_SITE_KEY}
+                            onChange={(value)=> {
+                                setCaptchaVal(value)
+                                // console.log("Captcha value:", value);
+                                // captcha = value;
+                            }}
+                            size="compact"
+                            required
+                            className = "mt-1 mx-auto"
+                        />
+                    </div>
                     <button 
                         type='submit' 
                         className='text-gray-700 hover:text-white w-fit font-bold tracking-wider p-3 rounded-xl mx-auto hover:bg-slate-500 border-2 border-black bg-white titleName px-6 mt-3'
