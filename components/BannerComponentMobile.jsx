@@ -18,14 +18,14 @@ function BannerComponentMobile() {
     return (
         <>
             <div className="flex absolute bottom-0 w-full h-5/6">
-            <Image src="/assets/profilepic.png" className='object-cover object-left overflow-hidden' width="1300px" height="1800px" alt="My Profile Picture" />
+            <Image src="/assets/profilepic.png" priority={true} className='object-cover object-left overflow-hidden' width="1300px" height="1800px" alt="My Profile Picture" />
             </div>
             <div className={` ${styles.bannerText} bottom-0 h-1/3 text-white absolute z-10`}>
                 {/* w-full h-1/3 px-3 */}
             </div>
             <div className='flex bottom-0 w-full h-1/6 mb-2 items-center px-5 absolute text-white z-20'>
                 <div className='flex w-5/6 flex-col'>
-                    <p className='font-bold text-2xl'>Hi, I am</p>
+                    <p className='font-bold text-2xl'>Hi👋, I am</p>
                     <h1 className="text-4xl font-bold">
                     <Typer child={msg} speed={150} />
                     </h1>

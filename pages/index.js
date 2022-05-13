@@ -10,6 +10,7 @@ import ExperienceComponent from '../components/ExperienceComponent'
 import ContactComponent from '../components/ContactComponent'
 import NavbarComponent from '../components/NavbarComponent'
 import BannerComponentMobile from '../components/BannerComponentMobile'
+import FooterComponent from '../components/FooterComponent'
 
 const SkillsComponent = dynamic(
   () => import('../components/SkillsComponent'),
@@ -24,7 +25,7 @@ export default function Home() {
         <meta name="description" content="Aniket Dewnani's Creative Portfolio" />
         <link rel="icon" href="/assets/logo.png" />
       </Head>
-      <div className={`scroll-smooth ${styles.maincontainer}`}>
+      <div className={`${styles.maincontainer}`}>
         <NavbarComponent />
         <div className='hidden md:block'>
           <BannerComponent />
@@ -43,6 +44,8 @@ export default function Home() {
         <ExperienceComponent />
         {/* Contact Me Section */}
         <ContactComponent />
+
+        <FooterComponent />
       </div>
     </div>
   )

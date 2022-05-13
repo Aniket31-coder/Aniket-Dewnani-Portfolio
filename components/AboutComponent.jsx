@@ -5,7 +5,7 @@ function AboutComponent() {
   return (
     <div id="about" className="pb-24 pt-12">
         <div className="border-x-2 border-gray-600 w-fit px-4 mx-auto">
-        <h4 className='font-bold titleName text-2xl text-center tracking-wider'>About Me</h4>
+        <h4 className='font-bold titleName text-2xl text-center tracking-wider'>About Me 🙋‍♂️</h4>
         </div>
     
         <div className='flex w-10/12 p-6 rounded-2xl mt-6 mx-auto items-center'>
