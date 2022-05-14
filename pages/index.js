@@ -27,6 +27,7 @@ export default function Home() {
     <div className='selection:bg-gray-400'>
       <Head>
         <title>Aniket Dewnani&apos;s Portfolio</title>
+        <meta name="google-site-verification" content="xRxdgV9gdXzTemExunJJfxbsaGciAanVTj47ZaddYFk" />
         <meta name="description" content="Aniket Dewnani's Portfolio" />
         <meta name="keywords" content="Aniket Dewnani, Aniket Dewnani's Portfolio" />
         <link rel="icon" href="/assets/logo.png" />
