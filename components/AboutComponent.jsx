@@ -12,9 +12,11 @@ function AboutComponent() {
         <div className='hidden md:block flex-1 text-center' data-aos="flip-left" data-aos-duration="600">
             <Image src="/assets/logo.png" alt="Logo" width={"230px"} height={"230px"} />
         </div>
-        <div className='flex-1 rounded-2xl text-center bg-slate-700 text-gray-900 p-4' data-aos="zoom-in-up" data-aos-duration="600">
+        <div className='flex-1 rounded-2xl text-center md:text-justify bg-slate-700 text-gray-900 p-4' data-aos="zoom-in-up" data-aos-duration="600">
             <div className="bg-stone-100 p-4 rounded-xl oleofont">
-            Nulla in velit a meus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est. Morbi commodo, eros in dignissim tempus, lacus odio rutrum augue, in semper sem magna quis tellus. Etiam enim erat, suscipit eu semper a, dictum sit amet elit. Nunc egestas nisi eget enim gravida facilisis. Pellentesque laoreet varius turpis vel pharetra. Ut ante justo, consequat vitae elementum tempor, accumsan nec eros. 
+            I am a Third Year Computer Engineering Student, who likes to learn about new CSS Frameworks and technologies. I honed my skills at <span className="text-gray-800 font-semibold">web-development</span> and <span className="text-gray-800 font-semibold">problem solving</span>.
+            <br />
+            I design websites using HTML, CSS, ReactJS and NextJS. Being a CSS lover, I utilize CSS frameworks such as Bootstrap and TailwindCSS for making my website. 
             </div>
         </div>
         </div>
