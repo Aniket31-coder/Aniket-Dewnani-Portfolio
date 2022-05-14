@@ -18,7 +18,7 @@ function SkillsComponent() {
     
     return (
         <div id="skills" className="pb-24 pt-12">
-            <div className="border-x-2 border-gray-600 w-fit px-4 mx-auto">
+            <div className="border-x-2 border-gray-600 w-fit px-4 mx-auto" data-aos="zoom-in-down" data-aos-duration="600">
             <h4 className='font-bold titleName text-2xl text-center tracking-wider'>Skills 🤹</h4>
             </div>
         
@@ -27,7 +27,7 @@ function SkillsComponent() {
                 {
                     data.skills.map((skill)=> {
                     return (
-                        <div key={skill.id} className='justify-center w-9/12 md:w-10/12 xl:w-8/12 mx-auto'>
+                        <div key={skill.id} className='justify-center w-9/12 md:w-10/12 xl:w-8/12 mx-auto' data-aos={skill.id%2==0 ? "flip-up": "flip-down"} data-aos-duration="700">
                             <VisibilitySensor partialVisibility={true}>
                             {({ isVisible }) => {
                                 const percentage = isVisible ? skill.value : 0;

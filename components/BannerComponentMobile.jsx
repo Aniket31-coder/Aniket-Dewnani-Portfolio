@@ -17,21 +17,21 @@ function BannerComponentMobile() {
       const msg= "Aniket Dewnani"
     return (
         <>
-            <div className="flex absolute bottom-0 w-full h-5/6">
+            <div className="flex absolute bottom-0 w-full h-5/6" data-aos="zoom-in-left" data-aos-duration="1200">
             <Image src="/assets/profilepic.png" priority={true} className='object-cover object-left overflow-hidden' width="1300px" height="1800px" alt="My Profile Picture" />
             </div>
             <div className={` ${styles.bannerText} bottom-0 h-1/3 text-white absolute z-10`}>
                 {/* w-full h-1/3 px-3 */}
             </div>
             <div className='flex bottom-0 w-full h-1/6 mb-2 items-center px-5 absolute text-white z-20'>
-                <div className='flex w-5/6 flex-col'>
+                <div className='flex w-5/6 flex-col' data-aos="slide-right" data-aos-duration="900">
                     <p className='font-bold text-2xl'>Hi👋, I am</p>
                     <h1 className="text-4xl font-bold">
                     <Typer child={msg} speed={150} />
                     </h1>
                     <p className='text-lg tracking-wide font-bold pt-2'>Front-End Developer</p>
                 </div>
-                <div className='flex w-1/6 flex-col justify-center'>
+                <div className='flex w-1/6 flex-col justify-center' data-aos="slide-left" data-aos-duration="900">
                     <div>
                         <button className='hover:bg-gray-700 text-white font-bold pt-2 px-2 rounded' onClick={() => {window.location=("mailto:aniketdewnani31@gmail.com")}}>
                         <Image src="/assets/email.svg" width="30px" height="30px" alt="Social Media Icon" />

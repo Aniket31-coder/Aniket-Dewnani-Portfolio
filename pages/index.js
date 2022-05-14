@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import React from 'react'
+import React, { useEffect } from 'react'
 import dynamic from 'next/dynamic'
+import AOS from 'aos';
 
 // import SkillsComponent from '../components/SkillsComponent'
 import styles from '../styles/Home.module.css'
@@ -18,8 +19,12 @@ const SkillsComponent = dynamic(
 )
 
 export default function Home() {
+  
+  useEffect(() => {
+    AOS.init()
+  })
   return (
-    <div>
+    <div className='selection:bg-gray-400'>
       <Head>
         <title>Aniket Dewnani&apos;s Portfolio</title>
         <meta name="description" content="Aniket Dewnani's Creative Portfolio" />

@@ -15,7 +15,7 @@ function BannerComponent() {
       const msg= "Aniket Dewnani"
     return (
         <div className="flex px-3 lg:px-14">
-          <div className='md:pt-48 flex-1'>
+          <div className='md:pt-48 flex-1' data-aos="fade-right" data-aos-duration="600">
             <p className='font-bold text-2xl'>Hi👋, I am</p>
             <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold">
               <Typer child={msg} speed={150} />
@@ -39,7 +39,7 @@ function BannerComponent() {
               </div>
             </div>
           </div>
-          <div className='flex-1'>
+          <div className='flex-1' data-aos="fade-down-left" data-aos-duration="600">
             <div className="w-full lg:w-10/12 h-full flex md:mx-auto xl:mx-0" style={{overflow: "hidden"}}> 
               <Image src="/assets/profilepic.png" priority={true} className="items-baseline" width="658px" height="715px" alt="My Profile Picture" />
             </div>

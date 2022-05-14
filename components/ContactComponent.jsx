@@ -1,6 +1,7 @@
 import emailjs from '@emailjs/browser';
 import React, { useState } from 'react';
 import ReCAPTCHA from "react-google-recaptcha";
+import confetti from 'canvas-confetti'
 
 function ContactComponent() {
 
@@ -10,8 +11,26 @@ function ContactComponent() {
     const [captchaVal, setCaptchaVal] = useState('')
     var submit = false;
     const [showModal, setShowModal] = useState(false)
-    var userName = ''
-
+    const [userName, setUserName] = useState('')
+    var count = 200;
+    var defaults = {
+      origin: { y: 0.7 }
+    };
+    
+    function fire(particleRatio, opts) {
+      confetti(Object.assign({}, defaults, opts, {
+        particleCount: Math.floor(count * particleRatio)
+      }));
+    }
+    
+    function confettiComponent() {
+        fire(0.25, { spread: 26, startVelocity: 55 });
+        fire(0.2, { spread: 60 });
+        fire(0.35, { spread: 100, decay: 0.91, scalar: 0.8 });
+        fire(0.1, { spread: 120, startVelocity: 25, decay: 0.92, scalar: 1.2 });
+        fire(0.1, { spread: 120, startVelocity: 45 });
+    }
+    
     const SuccessModal = () => {
         return (
             <>
@@ -41,8 +60,8 @@ function ContactComponent() {
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents Refreshing the Form
-        userName = name
         // console.log(name + "  " + email +" " + body);
+        setUserName(name)
         submit = true;
         var templateParams = {
             name: name,
@@ -57,6 +76,7 @@ function ContactComponent() {
                 .then(function(response) {
                     // console.log('SUCCESS!', response.status, response.text);
                     setShowModal(!showModal);
+                    confettiComponent()
                     setName('');
                     setBody('');
                     setEmail('');
@@ -73,10 +93,12 @@ function ContactComponent() {
         <>
             <SuccessModal />
             <div id="contact" className="pb-20 pt-12">
-                <div className="border-x-2 border-gray-600 w-fit px-4 mx-auto">
+                <div className="border-x-2 border-gray-600 w-fit px-4 mx-auto" data-aos="flip-down" data-aos-duration="700">
                     <h4 className='font-bold titleName text-2xl text-center tracking-wider'>Contact Me 📧</h4>
                 </div>
-                <div className="w-10/12 mx-auto md:w-8/12 lg:w-6/12 bg-zinc-400 mt-12 p-3 md:p-4 lg:p-12 rounded-xl">
+                <div className="w-10/12 mx-auto md:w-8/12 lg:w-6/12 bg-zinc-400 mt-12 p-3 md:p-4 lg:p-12 rounded-xl"
+                 data-aos="fade-up" data-aos-duration="700"
+                >
                 <form className='grid grid-cols-1 gap-6 max-w-full' onSubmit={handleSubmit}>
                     <label className="block">
                         <span className="text-white titleName font-semibold tracking-wider">Full name</span>
