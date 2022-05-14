@@ -27,7 +27,8 @@ export default function Home() {
     <div className='selection:bg-gray-400'>
       <Head>
         <title>Aniket Dewnani&apos;s Portfolio</title>
-        <meta name="description" content="Aniket Dewnani's Creative Portfolio" />
+        <meta name="description" content="Aniket Dewnani's Portfolio" />
+        <meta name="keywords" content="Aniket Dewnani, Aniket Dewnani's Portfolio" />
         <link rel="icon" href="/assets/logo.png" />
       </Head>
       <div className={`${styles.maincontainer}`}>
