@@ -27,7 +27,7 @@ export default function Home() {
     <div className='selection:bg-gray-400'>
       <Head>
         <title>Aniket Dewnani&apos;s Portfolio</title>
-        <meta charset="UTF-8" />
+        <meta charSet="UTF-8" />
         <meta name="author" content='Aniket Dewnani' />
         <meta name="google-site-verification" content="xRxdgV9gdXzTemExunJJfxbsaGciAanVTj47ZaddYFk" />
         <meta name="description" content="Aniket Dewnani's Portfolio" />

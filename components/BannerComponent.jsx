@@ -40,8 +40,8 @@ function BannerComponent() {
             </div>
           </div>
           <div className='flex-1' data-aos="fade-down-left" data-aos-duration="600">
-            <div className="w-full lg:w-10/12 h-full flex md:mx-auto xl:mx-0" style={{overflow: "hidden"}}> 
-              <Image src="/assets/profilepic.png" priority={true} className="items-baseline" width="658px" height="715px" alt="My Profile Picture" />
+            <div className="w-full lg:w-10/12 h-full flex md:mx-auto xl:mx-0 xl:pt-5" style={{overflow: "hidden"}}> 
+              <Image src="/assets/profilepic.png" priority={true} className="items-baseline" width="658px" height="700px" alt="My Profile Picture" />
             </div>
           </div>
         </div>
