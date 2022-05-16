@@ -33,17 +33,17 @@ function BannerComponentMobile() {
                 </div>
                 <div className='flex w-1/6 flex-col justify-center' data-aos="slide-left" data-aos-duration="900">
                     <div>
-                        <button className='hover:bg-gray-300 bg-white text-white font-bold pt-2 mb-1 px-2 rounded' onClick={() => {window.location=("mailto:aniketdewnani31@gmail.com")}}>
+                        <button className='hover:bg-gray-300 bg-white text-white font-bold pt-1 mb-1 px-2 rounded' onClick={() => {window.location=("mailto:aniketdewnani31@gmail.com")}}>
                         <Image src="/assets/email.svg" width="30px" height="30px" alt="Social Media Icon" />
                         </button>
                     </div>
                     <div>
-                        <button className='hover:bg-gray-300 bg-white text-white font-bold pt-2 mb-1 px-2 rounded' onClick={() => {window.open("https://www.github.com/Aniket31-coder")}}>
+                        <button className='hover:bg-gray-300 bg-white text-white font-bold pt-1 mb-1 px-2 rounded' onClick={() => {window.open("https://www.github.com/Aniket31-coder")}}>
                         <Image src="/assets/github.svg" width="30px" height="30px" alt="Social Media Icon" />
                         </button>
                     </div>
                     <div>
-                        <button className='hover:bg-gray-300 bg-white text-white font-bold pt-2 mb-1 px-2 rounded' onClick={() => {window.open("https://www.linkedin.com/in/aniket-dewnani-076392193/")}}>
+                        <button className='hover:bg-gray-300 bg-white text-white font-bold pt-1 mb-1 px-2 rounded' onClick={() => {window.open("https://www.linkedin.com/in/aniket-dewnani-076392193/")}}>
                         <Image src="/assets/linkedin.svg" width="30px" height="30px" alt="Social Media Icon" />
                         </button>
                     </div>
