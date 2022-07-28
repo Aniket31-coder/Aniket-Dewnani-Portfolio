@@ -14,7 +14,7 @@ function AboutComponent() {
         </div>
         <div className='flex-1 rounded-2xl text-center md:text-justify bg-slate-700 text-gray-900 p-4' data-aos="zoom-in-up" data-aos-duration="600">
             <div className="bg-stone-100 p-4 rounded-xl oleofont">
-            I am a Third Year Computer Engineering Student, who likes to learn about new CSS Frameworks and technologies. I honed my skills at <span className="text-gray-800 font-semibold">web-development</span> and <span className="text-gray-800 font-semibold">problem solving</span>.
+            I am a Fourth-Year Computer Engineering Student, who likes to learn about new CSS Frameworks and technologies. I honed my skills at <span className="text-gray-800 font-semibold">web-development</span> and <span className="text-gray-800 font-semibold">problem solving</span>.
             <br />
             I design websites using HTML, CSS, ReactJS and NextJS. Being a CSS lover, I utilize CSS frameworks such as Bootstrap and TailwindCSS for making my website. 
             </div>
