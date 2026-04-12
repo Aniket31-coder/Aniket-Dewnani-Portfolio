@@ -24,7 +24,7 @@ export function Header() {
         	className="truncate bg-gradient-to-r from-sky-600 via-fuchsia-600 to-emerald-600 bg-clip-text text-base text-transparent
                    	dark:from-sky-300 dark:via-fuchsia-300 dark:to-emerald-300 sm:text-lg"
       	>
-        	AD
+        	{/* AD */}
       	</span>
     	</a>
     	<div className="flex items-center gap-4">
