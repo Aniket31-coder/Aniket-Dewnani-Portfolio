@@ -23,7 +23,7 @@ export const profile = {
   socials: [
     { label: "GitHub", href: "https://www.github.com/Aniket31-coder", image: "assets/github.svg" }, // from your old banner links
     { label: "LinkedIn", href: "https://www.linkedin.com/in/aniket-dewnani-076392193/", image: "assets/linkedin.svg" }, // from your old banner links
-    { label: "Resume", href: "/Aniket_Dewnani_Resume.pdf", image: "assets/Aniket_Dewnani_Resume.pdf" },
+    { label: "Resume", href: "/Aniket_Dewnani_Resume.pdf", image: "/Aniket_Dewnani_Resume.pdf" },
   ] satisfies Social[],
  
   about: [
@@ -31,7 +31,7 @@ export const profile = {
   "I also build clean, responsive web experiences and enjoy combining UI engineering with analytics-driven problem-solving.",
   ],
  
-  // From your resume sections (Projects / POR / Awards / Tech Skills)
+  // Sections (Projects / POR / Awards / Tech Skills)
   projects: [
     {
       name: "Portfolio",
