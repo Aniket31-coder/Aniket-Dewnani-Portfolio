@@ -23,7 +23,7 @@ export const profile = {
   socials: [
     { label: "GitHub", href: "https://www.github.com/Aniket31-coder", image: "assets/github.svg" }, // from your old banner links
     { label: "LinkedIn", href: "https://www.linkedin.com/in/aniket-dewnani-076392193/", image: "assets/linkedin.svg" }, // from your old banner links
-    { label: "Resume", href: "/Aniket_Dewnani_Resume.pdf", image: "assets/logo.png" },
+    { label: "Resume", href: "/Aniket_Dewnani_Resume.pdf", image: "assets/Aniket_Dewnani_Resume.pdf" },
   ] satisfies Social[],
  
   about: [
