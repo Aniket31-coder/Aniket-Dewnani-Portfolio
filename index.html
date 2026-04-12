@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var isDark = saved ? saved === "dark" : prefersDark;
+          document.documentElement.classList.toggle("dark", isDark);
+        } catch (e) {}
+      })();
+    </script>
+ 
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aniket Dewnani | Developer Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio of Aniket Dewnani, a Data Analyst as well as Front-end developer focused on React, Tailwind CSS, and modern web development"
+    />
+    <meta
+      name="keywords"
+      content="Aniket Dewnani, Data Analyst as well as Front-end developer, React developer portfolio, Tailwind CSS, web developer portfolio"
+    />
+    <meta name="author" content="Aniket Dewnani" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://aniket-dewnani-portfolio.vercel.app/" />
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="preload" as="image" href="/assets/heroimage.png" fetchpriority="high" />
+ 
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Aniket Dewnani | Developer Portfolio" />
+    <meta
+      property="og:description"
+      content="Portfolio of Aniket Dewnani, a Data Analyst as well as Front-end developer focused on React, Tailwind CSS, and modern web development"
+    />
+    <meta property="og:url" content="https://aniket-dewnani-portfolio.vercel.app/" />
+    <meta property="og:site_name" content="Aniket Dewnani Portfolio" />
+    <meta property="og:image" content="https://aniket-dewnani-portfolio.vercel.app/assets/profilepic.png" />
+ 
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aniket Dewnani | Developer Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Portfolio of Aniket Dewnani, a Data Analyst as well as Front-end developer focused on React, Tailwind CSS, and modern web development"
+    />
+    <meta name="twitter:image" content="https://aniket-dewnani-portfolio.vercel.app/assets/profilepic.png" />
+  </head>
+ 
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+ 
+<!-- <!doctype html>
+<html lang="en">
+  <head>
+    <script>
+        (function () {
+        try {
+          var saved = localStorage.getItem("theme");
+          var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+          var isDark = saved ? saved === "dark" : prefersDark;
+          document.documentElement.classList.toggle("dark", isDark);
+        } catch (e) {}
+      })();
+    </script>
+ 
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="assets/logo.png" />
+    <link rel="preload" as="image" href="/assets/heroimage.png" fetchpriority="high" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aniket Dewnani Portfolio</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html> -->
