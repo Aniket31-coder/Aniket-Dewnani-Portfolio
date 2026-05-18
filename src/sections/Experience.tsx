@@ -1,36 +1,48 @@
-import { motion, type MotionProps } from "framer-motion";
-import { Card } from "../ui/Card";
-import { baseRevealTransition } from "../motion/reveal";
-import type { profile as profileValue } from "../data/profile";
-import { BulletList } from "../ui/BulletList";
+import { motion, useReducedMotion, type MotionProps } from "framer-motion";
+import { profile } from "../data/profile";
+import { SectionHeader } from "../ui/SectionHeader";
  
-export function ExperienceSection({
-  profile,
-  reveal,
-}: {
-  profile: typeof profileValue;
-  reveal: MotionProps;
-}) {
+export function Experience() {
+  const prefersReducedMotion = useReducedMotion();
+  const reveal: MotionProps = prefersReducedMotion
+    ? {}
+    : {
+        initial: { opacity: 0, y: 18 },
+        whileInView: { opacity: 1, y: 0 },
+        viewport: { once: true, amount: 0.18 },
+        transition: { duration: 0.55, ease: "easeOut" },
+      };
+ 
   return (
-    <div className="space-y-5">
-      {profile.experience.map((e, i) => (
-        <motion.div
-          key={`${e.company}-${e.title}`}
-          {...reveal}
-          transition={{ ...baseRevealTransition, delay: i * 0.04 }}
-        >
-          <Card>
-            <div className="flex flex-col gap-1 md:flex-row md:items-baseline md:justify-between">
-              <div>
-                <p className="font-medium text-zinc-900 dark:text-zinc-50">{e.title}</p>
-                <p className="text-sm text-zinc-600 dark:text-zinc-300">{e.company}</p>
-              </div>
-              <p className="text-xs text-zinc-400">{e.date}</p>
+    <section id="work" className="portfolio-section">
+      <SectionHeader prefix="where I’ve" emphasis="worked" index="02" total="06" />
+
+      <motion.div {...reveal} className="timeline">
+        {profile.experience.map((e) => (
+          <div key={`${e.company}-${e.title}`} className="tl-item group relative pt-4 pb-9">
+            <span className="font-mono text-xs uppercase tracking-[0.1em] text-muted">
+              {e.date}
+            </span>
+            <h3 className="tl-heading">
+              {e.title}{" "}
+              <span className="italic text-accent">— {e.company}</span>
+            </h3>
+            <p className="mt-2.5 max-w-[680px] text-[15px] text-ink-soft">
+              {e.description}
+            </p>
+            <div className="mt-3.5 flex flex-wrap gap-1.5">
+              {e.pills.map((p) => (
+                <span
+                  key={p}
+                  className="rounded-full border border-line px-2.5 py-1 font-mono text-[11px] text-ink-soft"
+                >
+                  {p}
+                </span>
+              ))}
             </div>
-            <BulletList items={[...e.desc]} />
-          </Card>
-        </motion.div>
-      ))}
-    </div>
+          </div>
+        ))}
+      </motion.div>
+    </section>
   );
 }

@@ -1,145 +1,217 @@
-export type Social = { label: string; href: string, image: string };
+// All content for the portfolio lives here so it's easy to edit
+// without touching components.
+ 
+export type Social = { label: string; href: string };
+ 
 export type Experience = {
   company: string;
   title: string;
   date: string;
-  desc: string[];
+  description: string;
+  pills: string[];
 };
+ 
 export type Project = {
   name: string;
-  date: string;
-  skills: string[];
-  bullets: string[];
+  tag: string;
+  number: string;
+  description: string;
+  stack: string[];
+  thumbVariant: "warm" | "cool" | "dashed";
+  thumbMark: string;
+  thumbImage?: string;
   github?: string;
   live?: string;
+  inProgress?: boolean;
 };
-export type PillGroup = { title: string; items: string[] };
+ 
+export type ToolkitRow = {
+  tag: string;
+  items: string[];
+  primary?: boolean;
+  learning?: boolean;
+};
+ 
+export type Award = {
+  mark: string;
+  title: string;
+  context: string;
+  meta: string;
+};
+ 
+export type Stat = { accent: string; suffix?: string; label: string };
  
 export const profile = {
   name: "Aniket Dewnani",
-  roleLine: "Strategy & Analytics • Front-end • Data + UI",
-  location: "India",
+  location: "Mumbai, India",
+  availability: "Available · Q3 2026",
   email: "aniketdewnani31@gmail.com",
+  resumeHref: "/Aniket_Dewnani_Resume.pdf",
+ 
   socials: [
-    { label: "GitHub", href: "https://www.github.com/Aniket31-coder", image: "assets/github.svg" }, // from your old banner links
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/aniket-dewnani-076392193/", image: "assets/linkedin.svg" }, // from your old banner links
-    { label: "Resume", href: "/Aniket_Dewnani_Resume.pdf", image: "/Aniket_Dewnani_Resume.pdf" },
+    { label: "GitHub", href: "https://www.github.com/Aniket31-coder" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/aniket-dewnani-076392193/" },
   ] satisfies Social[],
  
-  about: [
-    "I am a Data Analyst (Strategy & Analytics) at Deloitte USI with over 2 years of experience in Oracle FDI.",
-  "I also build clean, responsive web experiences and enjoy combining UI engineering with analytics-driven problem-solving.",
-  ],
+  // Hero
+  heroTagline: {
+    plain1: "Analyst at",
+    em1: "Deloitte USI",
+    plain2: "by day. I build",
+    em2: "data + UI",
+    plain3:
+      "things — Oracle FDI reports that don\u2019t lie, and React interfaces that",
+    squiggleText: "don\u2019t bore",
+  },
  
-  // Sections (Projects / POR / Awards / Tech Skills)
+  // Now-strip (replaces marquee)
+  now: [
+    { key: "Now building", value: "Schema Sketch" },
+    { key: "Now reading", value: "Refactoring UI · Adam Wathan" },
+    { key: "Now exploring", value: "AWS" },
+  ],
+
+  about: {
+    paragraph:
+      "I work at the seam between data and interface. By day, I\u2019m an Analyst at Deloitte USI — building semantic models, debugging Oracle SQL, and making reports that actually agree with each other. By night, I\u2019m back in React & Tailwind, creating interfaces with intent.",
+    highlights: [
+      "data and interface",
+      "Deloitte USI",
+      "React & Tailwind",
+    ],
+  },
+ 
+  stats: [
+    { accent: "2", suffix: " yrs", label: "at Deloitte USI · Strategy & Analytics" },
+    { accent: "30+", label: "Oracle FDI reports validated" },
+    { accent: "~900", suffix: "ms", label: "load time saved on a client site" },
+  ] satisfies Stat[],
+ 
+  // Top three only
+  experience: [
+    {
+      company: "Deloitte USI",
+      title: "Analyst, Strategy & Analytics",
+      date: "Jan 2024 — Present",
+      description:
+        "I own a slice of an Oracle FDI implementation: building custom subject areas, debugging long-running SQL, and validating reports against business logic. I\u2019ve also driven SIT across workstreams — unblocking testers, triaging issues, and getting fixes in before sprint end.",
+      pills: ["Oracle FDI", "Oracle SQL", "Semantic Models", "SIT"],
+    },
+    {
+      company: "Kalpas Innovations",
+      title: "ReactJS Developer Intern",
+      date: "Dec 2021 — Mar 2022",
+      description:
+        "Shipped front-end work across 3+ client projects on the Skote template; integrated 6+ APIs into the UI.",
+      pills: ["React", "REST APIs", "Skote"],
+    },
+    {
+      company: "App Avengers",
+      title: "Front-End Developer",
+      date: "Sep — Nov 2021",
+      description:
+        "Translated Figma into responsive, production-ready interfaces. Pushed for the small wins — image budgets, deferred JS, semantic markup — that compound into a measurably faster page.",
+      pills: ["Figma → HTML", "SEO", "Performance"],
+    },
+  ] satisfies Experience[],
+ 
   projects: [
     {
-      name: "Portfolio",
-      date: "Apr 2022",
-      skills: ["ReactJS", "TailwindCSS", "Figma", "Google reCAPTCHA", "EmailJS", "Scroll Animations"],
-      bullets: [
-        "Designed in Figma and developed with ReactJS + TailwindCSS.",
-        "Built a contact form that emails responses; showcased skills with varied visuals and animations.",
-      ],
-      github: "#",
-      live: "#",
+      name: "Schema Sketch",
+      tag: "2026 · Tool",
+      number: "01",
+      description:
+        "A live Mermaid-to-SQL DDL generator for three dialects (Oracle, Postgres, MySQL). Hand-written parser, type-aware emitters, deterministic output.",
+      stack: ["TypeScript", "React", "Tailwind", "Vitest"],
+      thumbVariant: "warm",
+      thumbMark: "...",
+      thumbImage: "assets/schema-sketch.png",
+      github: "https://github.com/Aniket31-coder/schema-sketch",
+      live: "https://schema-sketch.vercel.app",
     },
     {
-      name: "Voice Assistant – God’s Eye",
-      date: "Jun 2020",
-      skills: ["Python", "Speech-to-Text", "Chatbot"],
-      bullets: [
-        "Listens to user queries and responds with actions and answers.",
-        "Performs searches/calculations, sends emails, and provides weather insights.",
-      ],
-      github: "#",
+      name: "This portfolio",
+      tag: "2026 · Site you\u2019re on",
+      number: "02",
+      description:
+        "A redesign of my old portfolio — cream paper aesthetic, custom blob cursor that morphs over interactive elements. Built in React + Tailwind",
+      stack: ["React", "Tailwind", "Framer Motion", "Figma"],
+      thumbVariant: "warm",
+      thumbMark: "✱",
+      thumbImage: "assets/myportfolio.png",
+      github: "https://github.com/Aniket31-coder/Aniket-Dewnani-Portfolio",
+      live: "#top",
     },
+    {
+      name: "God\u2019s Eye",
+      tag: "2020 · College project",
+      number: "03",
+      description:
+        "A Python voice assistant that listens to queries and replies with action — searches, calculations, sending mail, fetching weather. Pre-LLM, pre-everything — just speech-to-text glued to good old-fashioned APIs.",
+      stack: ["Python", "Speech-to-Text", "Chatbot"],
+      thumbVariant: "cool",
+      thumbMark: "mic",
+      github: "https://github.com/Aniket31-coder/Voice-Assistant-God-s-Eye",
+    }
   ] satisfies Project[],
  
- experience: [
-  {
-    company: "Deloitte USI",
-    title: "Analyst – Strategy & Analytics",
-    date: "Jan 2024 – Present",
-    desc: [
-      "Tested and validated 30+ reports in Oracle FDI, improving data accuracy and reducing discrepancies across reporting outputs.",
-      "Created custom reports, debugged Oracle SQL issues, and supported performance improvements to enhance report speed and reliability.",
-      "Worked across multiple workstreams to contribute to solution design, develop subject areas, and implement semantic data models for analytics use cases.",
-      "Drove SIT execution through cross-functional coordination, blocker resolution, and timely support for business testers and team members.",
-    ],
-  },
-  {
-    company: "Kalpas Innovations Pvt. Ltd.",
-    title: "ReactJS Developer Intern",
-    date: "Dec 2021 – Mar 2022",
-    desc: [
-      "Contributed to 3+ client projects, building front-end experiences aligned with provided UI designs.",
-      "Enhanced websites using the Skote template, delivering 10+ feature additions within the existing design system.",
-      "Integrated 6+ APIs into the front end, helping connect UI workflows with backend services.",
-    ],
-  },
-  {
-    company: "App Avengers",
-    title: "Front-End Web Developer",
-    date: "Sep 2021 – Nov 2021",
-    desc: [
-      "Built responsive websites from scratch based on Figma designs, translating static designs into production-ready interfaces.",
-      "Rendered dynamic content from JSON and managed 8+ front-end components to support reusable page structures.",
-      "Improved SEO and reduced page load time by 900 milliseconds through front-end optimization.",
-    ],
-  },
-  {
-    company: "Youth India E-School",
-    title: "Front-End Web Developer",
-    date: "Jun 2021 – Sep 2021",
-    desc: [
-      "Developed front-end interfaces in ReactJS and TailwindCSS based on designs provided by the graphic design team.",
-      "Strengthened core JavaScript and ReactJS skills through hands-on implementation of responsive UI components.",
-      "Improved website SEO and expanded exposure to modern web practices, including Next.js.",
-    ],
-  },
-  {
-    company: "VESIT Renaissance Club",
-    title: "Web Developer Intern",
-    date: "Jun 2021 – Jul 2021",
-    desc: [
-      "Designed the website’s basic layout in Figma and created the logo to establish the visual direction of the platform.",
-      "Guided front-end implementation efforts, helping the team deliver key website features.",
-      "Supported backend development for functionality such as leaderboard tables for 30+ quizzes and authentication flows.",
-    ],
-  },
-] satisfies Experience[],
- 
-  skills: [
-    { title: "Programming Languages", items: ["Java", "Python", "JavaScript", "HTML"] },
-    { title: "Databases", items: ["MySQL", "Firebase", "Oracle SQL"] },
-    { title: "Library & Frameworks", items: ["ReactJS", "NextJS", "TailwindCSS", "Bootstrap"] },
-    { title: "Other Tools", items: ["Oracle FDI", "Oracle BI Repository", "Jira", "Git/GitHub", "Docker", "Figma", "Canva"] },
-  ] satisfies PillGroup[],
- 
-  positions: [
+  toolkit: [
     {
-      title: "Senior Technical Officer, CSI-VESIT",
-      date: "Nov 2021 – Jun 2022",
-      bullets: [
-        "Conducted sessions on Java and Docker (80+ students).",
-        "Built event websites and mentored 2+ students.",
-      ],
+      tag: "→ Daily drivers",
+      items: ["Oracle FDI", "Oracle SQL", "React", "Tailwind CSS", "Figma", "Jira"],
+      primary: true,
     },
     {
-      title: "Junior Technical Officer, CSI-VESIT",
-      date: "Jan 2021 – Nov 2021",
-      bullets: [
-        "Delivered a Bootstrap workshop (100+ students).",
-        "Supported execution of 5+ hackathons/coding events.",
-      ],
+      tag: "→ Comfortable in",
+      items: ["JavaScript", "Next.js", "HTML & CSS", "Python", "Git & GitHub", "Oracle BI Repository"],
     },
-  ],
+    {
+      tag: "→ Have worked with",
+      items: ["Java", "MySQL", "Firebase", "Bootstrap", "Docker"],
+    },
+    {
+      tag: "→ Currently learning",
+      items: ["TypeScript", "Framer Motion", "AWS"],
+      learning: true,
+    },
+  ] satisfies ToolkitRow[],
  
   awards: [
-    "Outstanding Performance and Circle of Joy Award (Deloitte).",
-    "Rising Star and Applause Awards (Deloitte).",
-    "First Prize in HTML–CSS Race (KC College).",
-    "Participated in 5+ open-source events/hackathons (SWoC, SIH).",
+    {
+      mark: "★",
+      title: "Outstanding Performance & Circle of Joy",
+      context:
+        "Top performance rating at Deloitte, plus a peer-nominated award for being a force multiplier on the team.",
+      meta: "Deloitte USI · 2025",
+    },
+    {
+      mark: "✦",
+      title: "Rising Star & Applause Awards",
+      context:
+        "Recognition for fast ramp-up as a new hire, plus repeated manager spot-bonuses for specific delivery wins.",
+      meta: "Deloitte USI · 2024",
+    },
+    {
+      mark: "⌬",
+      title: "SWoC & Smart India Hackathon participant",
+      context:
+        "Five+ open-source contributions and team submissions to SIH — India\u2019s largest national-level student hackathon.",
+      meta: "2020 — 2022",
+    },
+    // {
+    //   mark: "1°",
+    //   title: "First prize, HTML & CSS Race",
+    //   context:
+    //     "Won an inter-college front-end speed-coding competition at KC College, Thane.",
+    //   meta: "2021",
+    // },
+  ] satisfies Award[],
+ 
+  navLinks: [
+    { href: "#about", label: "About" },
+    { href: "#work", label: "Work" },
+    { href: "#projects", label: "Projects" },
+    { href: "#skills", label: "Skills" },
+    { href: "#awards", label: "Awards" },
   ],
 } as const;

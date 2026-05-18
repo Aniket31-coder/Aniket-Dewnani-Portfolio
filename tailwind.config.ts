@@ -5,30 +5,38 @@ export default {
   content: ["./index.html", "./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        serif: ["Fraunces", "ui-serif", "Georgia", "serif"],
+        sans: ["Geist", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["JetBrains Mono", "ui-monospace", "Consolas", "monospace"],
+      },
+      colors: {
+        paper: "rgb(var(--paper) / <alpha-value>)",
+        "paper-2": "rgb(var(--paper-2) / <alpha-value>)",
+        ink: "rgb(var(--ink) / <alpha-value>)",
+        "ink-soft": "rgb(var(--ink-soft) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
+        line: "rgb(var(--line) / <alpha-value>)",
+        "line-soft": "rgb(var(--line-soft) / <alpha-value>)",
+      },
       keyframes: {
-        wiggle: {
-          "0%, 100%": { transform: "scaleY(1)" },
-          "50%": { transform: "scaleY(0.92)" },
+        pulse: {
+          "0%, 100%": { transform: "scale(1)" },
+          "50%": { transform: "scale(1.15)" },
         },
-        floaty: {
-          "0%, 100%": { transform: "translateY(0px)" },
-          "50%": { transform: "translateY(-10px)" },
+        wobble: {
+          "0%, 100%": { transform: "rotate(-12deg)" },
+          "50%": { transform: "rotate(-6deg)" },
         },
-        sheen: {
-          "0%": { transform: "translateX(0) skewX(-12deg)" },
-          "100%": { transform: "translateX(260%) skewX(-12deg)" },
-        },
-        drift: {
-          "0%": { transform: "translateX(0px)" },
-          "50%": { transform: "translateX(10px)" },
-          "100%": { transform: "translateX(0px)" }
+        draw: {
+          to: { strokeDashoffset: "0" },
         },
       },
       animation: {
-        wiggle: "wiggle 1s ease-in-out infinite",
-        floaty: "floaty 6s ease-in-out infinite",
-        sheen: "sheen 800ms ease-out 1",
-        drift: "drift 10s ease-in-out infinite",
+        pulse: "pulse 2.4s ease-in-out infinite",
+        wobble: "wobble 6s ease-in-out infinite",
+        draw: "draw 1400ms cubic-bezier(.7,0,.3,1) 800ms forwards",
       },
     },
   },
