@@ -98,7 +98,7 @@ html.dark .portfolio-nav .navlinks a.active {
 .portfolio-nav .cta:hover {
   transform: translateY(-1px);
   background: rgb(var(--accent));
-  color: #1a1d2e;
+  color: rgb(var(--paper));
 }
 html.dark .portfolio-nav .cta {
   background: rgb(var(--accent));
